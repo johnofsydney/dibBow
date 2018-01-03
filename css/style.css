@@ -19,22 +19,43 @@ header {
 .main {
   margin: 1em auto;
   width: 90%;
+  background-color: cyan;
+  display: flex;
 }
 
 .left {
+  flex: 1;
+  margin: 5px;
+  background-color: magenta;
   display: inline-block;
-  width: 10%;
-  margin: 0;
 }
 
 .right {
-  display: inline-block;
-  width: 90%;
+  flex: 3;
   height : 90vh;
-  margin: 0;
-
+  margin: 5px;
+  background-color: yellow;
+  display: inline-block;
 }
 
 .bigSquare {
-  margin: auto;
+  margin: 0 auto;
+  background-color: limegreen;
+  display: grid;
+}
+
+.smallSquare {
+
+}
+
+
+
+/* A little cheating is allowed here - seems you only need to specify one each of row and column */
+
+.row-1 {
+  grid-row: 1
+}
+
+.col-1 {
+  grid-column: 1
 }
