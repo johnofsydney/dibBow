@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  background-color: pink;
+}
+
+div {
+  border: solid red 1px;
+}
+
+header {
+  width: 100%;
+  background-color: yellow;
+}
+
+.main {
+  margin: 1em auto;
+  width: 90%;
+}
+
+.left {
+  display: inline-block;
+  width: 10%;
+  margin: 0;
+}
+
+.right {
+  display: inline-block;
+  width: 90%;
+  height : 90vh;
+  margin: 0;
+
+}
+
+.bigSquare {
+  margin: auto;
+}
