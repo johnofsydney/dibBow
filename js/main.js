@@ -37,7 +37,7 @@ const drawBoxes = function() {
   if (h < w) { bigSquareSize = h }
   drawBigSquare(bigSquareSize)
 
-  drawSmallBoxes(10, bigSquareSize)
+  drawSmallBoxes(20, bigSquareSize)
 };
 
 

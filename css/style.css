@@ -2,7 +2,6 @@
   box-sizing: border-box;
 }
 
-
 body {
   background-color: pink;
 }
@@ -31,7 +30,7 @@ header {
 }
 
 .right {
-  flex: 3;
+  flex: 4;
   height : 90vh;
   margin: 5px;
   background-color: yellow;
