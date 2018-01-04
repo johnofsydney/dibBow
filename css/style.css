@@ -1,50 +1,56 @@
 * {
   box-sizing: border-box;
+  font-family: 'arial', sans-serif;
 }
 
 body {
-  background-color: pink;
+  /* background-color: pink; */
 }
 
 div {
-  border: solid red 1px;
+
 }
 
 header {
   width: 100%;
   background-color: yellow;
+  text-align: center;
 }
 
 .main {
   margin: 1em auto;
   width: 90%;
-  background-color: cyan;
+  /* background-color: cyan; */
   display: flex;
 }
 
 .left {
   flex: 1;
-  margin: 5px;
-  background-color: magenta;
-  display: inline-block;
+  margin: 0;
+  /* background-color: magenta; */
+  /* display: inline-block; */
+  border: solid black 1px;
+  box-shadow: 2px 2px;
+  border-radius: 1em;
+  padding: 0.5em;
 }
 
 .right {
   flex: 4;
   height : 90vh;
-  margin: 5px;
-  background-color: yellow;
-  display: inline-block;
+  margin: 0;
+  /* background-color: yellow; */
+  /* display: inline-block; */
 }
 
 .bigSquare {
   margin: 0 auto;
-  background-color: limegreen;
+  /* background-color: limegreen; */
   display: grid;
 }
 
 .smallSquare {
-
+  /* border: solid red 1px; */
 }
 
 
