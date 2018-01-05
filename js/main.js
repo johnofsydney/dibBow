@@ -13,7 +13,7 @@ let rainbowTimerDone
 let heartbeatTimerDone
 let diagonalTimerDone
 let mesmeriseTimerDone
-let mesmer2TimerDone
+let hypnotiseTimerDone
 
 const drawBigSquare = function(s) {
   let bigSquareDiv = `<div class="bigSquare"></div>`
@@ -66,7 +66,8 @@ const pulse = function () {
   let b = Math.round((127 * Math.sin(x - (pie/3)) + 128))
   // console.log(r, g, b);
   $(`.smallSquare`).css('background-color', `rgb(${r},${g},${b})`)
-  $('.smallSquare').css('border', 'none')
+  $('.smallSquare').css('border', 'none');
+  $('.smallSquare').css('opacity', "1")
 }
 
 
@@ -116,7 +117,7 @@ const mesmerise = function () {
 }
 
 
-const mesmer2 = function () {
+const hypnotise = function () {
   for (var i = 1; i <= n; i++) {
     for (var j = 1; j <= n; j++) {
       x = x + rateFactor / 10000
@@ -170,13 +171,13 @@ $(document).ready( function () {
     stopAndRedraw();
     pulseTimerDone = setInterval(pulse, speedConstant);
   })
-
-  $('#stopPulse').on('click', function() {
-    clearInterval(pulseTimerDone);
-    clearInterval(rainbowTimerDone);
-    $('.right').html('')
-    drawBoxes(w, h)
-  })
+  //
+  // $('#stopPulse').on('click', function() {
+  //   clearInterval(pulseTimerDone);
+  //   clearInterval(rainbowTimerDone);
+  //   $('.right').html('')
+  //   drawBoxes(w, h)
+  // })
 
   $('#rainbow').on('click', function() {
     getValues()
@@ -203,10 +204,10 @@ $(document).ready( function () {
     mesmeriseTimerDone = setInterval(mesmerise, speedConstant);
   })
 
-  $('#mesmer2').on('click', function() {
+  $('#hypnotise').on('click', function() {
     getValues()
     stopAndRedraw();
-    mesmer2TimerDone = setInterval(mesmer2, speedConstant);
+    hypnotiseTimerDone = setInterval(hypnotise, speedConstant);
   })
 
 
@@ -217,7 +218,7 @@ $(document).ready( function () {
     clearInterval(heartbeatTimerDone);
     clearInterval(diagonalTimerDone);
     clearInterval(mesmeriseTimerDone);
-    clearInterval(mesmer2TimerDone);
+    clearInterval(hypnotiseTimerDone);
 
     $('.right').html('')
     drawBoxes(w, h)

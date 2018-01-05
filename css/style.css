@@ -4,7 +4,6 @@
 }
 
 body {
-  /* background-color: pink; */
   background-image: url("../images/rainbow.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -22,26 +21,30 @@ header {
   opacity: 0.5;
   border-radius: 0.5em;
   margin: 0 auto;
+  border: solid black 1px;
+  box-shadow: 2px 2px;
+  /* border-radius: 1em; */
+}
+
+h1 {
+  line-height: 0.5em;
 }
 
 .main {
-  margin: 1em auto;
+  margin: .5em auto;
   width: 95%;
-  /* background-color: cyan; */
   display: flex;
 }
 
 .left {
   flex: 1;
   margin-right: 1em;
-  /* background-color: magenta; */
-  /* display: inline-block; */
   border: solid black 1px;
   box-shadow: 2px 2px;
   border-radius: 1em;
   padding: 0.5em;
-  background-color: white;
-  opacity: 0.5;
+  background-color: rgba(255,255,255,0.5);
+  font-size: 0.8em;
 }
 
 button {
@@ -57,21 +60,41 @@ input {
   flex: 4;
   height : 90vh;
   margin: 0;
-  /* background-color: yellow; */
-  /* display: inline-block; */
+  border: solid black 1px;
+  box-shadow: 2px 2px;
+  border-radius: 1em;
+  padding: 0.5em;
+  background-color: rgba(255,255,255,0.5);
 }
 
 .bigSquare {
   margin: 0 auto;
-  /* background-color: limegreen; */
   display: grid;
 }
 
 .smallSquare {
-  /* border: solid red 1px; */
+  opacity: 1;
 }
 
+.btnDiv {
+  width: 90%;
+  margin: 0.25em auto;
+  padding: 0.25em;
+  background-color: white;
+  text-align: center;
+  border: solid black 1px;
+  box-shadow: 2px 2px;
+  border-radius: 1em;
+}
 
+.btnDiv:hover {
+  background-color: cyan;
+}
+
+#notes {
+  text-align: left;
+  padding: 1em
+}
 
 /* A little cheating is allowed here - seems you only need to specify one each of row and column */
 
