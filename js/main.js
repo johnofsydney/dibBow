@@ -14,6 +14,7 @@ let heartbeatTimerDone
 let diagonalTimerDone
 let mesmeriseTimerDone
 let hypnotiseTimerDone
+let flagsTimerDone
 
 const drawBigSquare = function(s) {
   let bigSquareDiv = `<div class="bigSquare"></div>`
@@ -126,7 +127,7 @@ const hypnotise = function () {
       let r = Math.round((128 * Math.sin( x * (p + q)) + 127))
       let g = Math.round((128 * Math.cos( x * (p + q)) + 127))
 
-      $(`.smallSquare.col-${i}.row-${j}`).css('background-color', `rgb(${r},${g},0)`)
+      $(`.smallSquare.col-${i}.row-${j}`).css('background-color', `rgb(${r},${r},${0})`)
     }
   }
   $('.smallSquare').css('border', 'none')
@@ -150,7 +151,28 @@ const diagonal = function () {
 }
 
 
+const flags = function () {
+  const cols = ["red", "black","yellow", "blue", "green", "white"]
+  let p = Math.round(n / 3)
+  let q = 2 *  p
+  let a = Math.round(Math.random() * (cols.length - 1) + 0);
+  let top = cols.splice(a,1);
+  let b = Math.round(Math.random() * (cols.length - 1) + 0);
+  let middle = cols.splice(b,1)
+  let c = Math.round(Math.random() * (cols.length - 1) + 0);
+  let bottom = cols.splice(c,1)
 
+  for (var i = 1; i < p; i++) {
+    $(`.smallSquare.row-${i}`).css('background-color', `${top}`)
+  }
+  for (var j = p; j < q; j++) {
+    $(`.smallSquare.row-${j}`).css('background-color', `${middle}`)
+  }
+  for (var k = q; k < n; k++) {
+    $(`.smallSquare.row-${k}`).css('background-color', `${bottom}`)
+  }
+
+}
 
 
 $(document).ready( function () {
@@ -210,6 +232,13 @@ $(document).ready( function () {
     hypnotiseTimerDone = setInterval(hypnotise, speedConstant);
   })
 
+  $('#flags').on('click', function() {
+    getValues()
+    stopAndRedraw();
+    flags()
+    flagsTimerDone = setInterval(flags, speedConstant * 100);
+  })
+
 
   const stopAndRedraw = function () {
     x = 0
@@ -219,6 +248,7 @@ $(document).ready( function () {
     clearInterval(diagonalTimerDone);
     clearInterval(mesmeriseTimerDone);
     clearInterval(hypnotiseTimerDone);
+    clearInterval(flagsTimerDone);
 
     $('.right').html('')
     drawBoxes(w, h)
