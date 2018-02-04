@@ -9,9 +9,7 @@ body {
   background-repeat: no-repeat;
 }
 
-div {
 
-}
 
 header {
   width: 95%;
@@ -23,7 +21,6 @@ header {
   margin: 0 auto;
   border: solid black 1px;
   box-shadow: 2px 2px;
-  /* border-radius: 1em; */
 }
 
 h1 {

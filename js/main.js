@@ -193,13 +193,7 @@ $(document).ready( function () {
     stopAndRedraw();
     pulseTimerDone = setInterval(pulse, speedConstant);
   })
-  //
-  // $('#stopPulse').on('click', function() {
-  //   clearInterval(pulseTimerDone);
-  //   clearInterval(rainbowTimerDone);
-  //   $('.right').html('')
-  //   drawBoxes(w, h)
-  // })
+
 
   $('#rainbow').on('click', function() {
     getValues()
@@ -236,7 +230,7 @@ $(document).ready( function () {
     getValues()
     stopAndRedraw();
     flags()
-    flagsTimerDone = setInterval(flags, speedConstant * 100);
+    flagsTimerDone = setInterval(flags, speedConstant * 50);
   })
 
 
