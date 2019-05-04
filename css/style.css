@@ -9,6 +9,9 @@ body {
   background-repeat: no-repeat;
 }
 
+div {
+  /* border: red solid 2px; */
+}
 
 
 header {
